@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 using TMPro;
 using Ink.Runtime;
@@ -11,6 +12,8 @@ public class DialogControl : MonoBehaviour
     [SerializeField]
     public Story story;
     public TextAsset script;
+    public UnityEvent endGameEvent;
+    public SpeakerEvent changeSpeakerEvent;
 
     //UIS REFERENCES
 
@@ -18,13 +21,21 @@ public class DialogControl : MonoBehaviour
     public GameObject choicesBox;
     public GameObject continueButton;
 
-    // CONTROL
 
+    // CONTROL
     private DialogChoicesControl choicesControl;
 
     // Start is called before the first frame update
     public void Start() {
         this.InitStory();
+
+        if(this.endGameEvent == null){
+            this.endGameEvent = new UnityEvent();
+        }
+
+        if(this.changeSpeakerEvent == null){
+            this.changeSpeakerEvent = new SpeakerEvent();
+        }
     }
 
     // Update is called once per frame
@@ -45,6 +56,12 @@ public class DialogControl : MonoBehaviour
 
     private void InitStory() {
         this.story = new Story(script.text);
+        // this.speakerControl = new SpeakerControl(characterImage);
+
+        this.story.BindExternalFunction("Speaker", (string name, string emotion) => {
+            this.changeSpeakerEvent.Invoke(name, emotion);
+            // this.changeSpeakerEvent.Invoke(new SpeakerEventObject(name, emotion));
+        });
         this.choicesControl = new DialogChoicesControl(story, choicesBox, continueButton);
         
         this.NextDialog();
@@ -61,6 +78,7 @@ public class DialogControl : MonoBehaviour
                 this.DisplayChoices();
                 break;
             default:
+                this.endGameEvent.Invoke();
                 break;
         }
     }

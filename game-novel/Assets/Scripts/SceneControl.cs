@@ -6,10 +6,22 @@ using System.Collections.Generic;
 
 public class SceneControl : MonoBehaviour
 {
+    enum TypeScene {
+        title,
+        game,
+        save,
+        end,
+    }
+
+    Dictionary<TypeScene, string> scenes = new Dictionary<TypeScene, string>();
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        this.scenes.Add(TypeScene.title, "MenuScene");
+        this.scenes.Add(TypeScene.game, "GameScene");
+        this.scenes.Add(TypeScene.save, "SaveScene");
+        this.scenes.Add(TypeScene.end, "EndScene");
     }
 
     // Update is called once per frame
@@ -17,9 +29,21 @@ public class SceneControl : MonoBehaviour
     {
         
     }
+    
+    public void OnTitle() {
+        StartCoroutine(ChangeScene(scenes[TypeScene.title]));
+    }
+
+    public void OnGame() {
+        StartCoroutine(ChangeScene(scenes[TypeScene.game]));
+    }
+
+    public void OnSave() {
+        StartCoroutine(ChangeScene(scenes[TypeScene.save]));
+    }
 
     public void OnEnd() {
-        StartCoroutine(ChangeScene("EndScene"));
+        StartCoroutine(ChangeScene(scenes[TypeScene.end]));
     }
 
     IEnumerator ChangeScene(string scene) {
