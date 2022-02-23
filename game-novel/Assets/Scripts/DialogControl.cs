@@ -13,6 +13,7 @@ public class DialogControl : MonoBehaviour
     public Story story;
     public TextAsset script;
     public UnityEvent endGameEvent;
+    public UnityEvent initGameEvent;
     public SpeakerEvent changeSpeakerEvent;
 
     //UIS REFERENCES
@@ -27,15 +28,21 @@ public class DialogControl : MonoBehaviour
 
     // Start is called before the first frame update
     public void Start() {
-        this.InitStory();
-
         if(this.endGameEvent == null){
             this.endGameEvent = new UnityEvent();
+        }
+
+        if(this.initGameEvent == null){
+            this.initGameEvent = new UnityEvent();
         }
 
         if(this.changeSpeakerEvent == null){
             this.changeSpeakerEvent = new SpeakerEvent();
         }
+
+        
+        this.InitStory();
+        this.initGameEvent.Invoke();
     }
 
     // Update is called once per frame

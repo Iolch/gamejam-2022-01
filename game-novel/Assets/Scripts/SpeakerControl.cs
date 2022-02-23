@@ -23,6 +23,8 @@ public class SpeakerControl : MonoBehaviour
 
     public Image characterImage;
 
+    public GameObject imageBox;
+
     public Dictionary<string, TypeEmotions> emotions;
     public Dictionary<string, TypeCharacters> characters;
 
@@ -42,8 +44,10 @@ public class SpeakerControl : MonoBehaviour
             case TypeCharacters.alex:
                 TypeEmotions emotion = this.emotions[speakerEmotion];
                 this.characterImage.sprite = this.alex.GetComponent<SpeakerAlex>().getSprite(emotion);
+                this.imageBox.SetActive(true);
                 break;
             default:
+                this.imageBox.SetActive(false);
                 break;
         }
     }

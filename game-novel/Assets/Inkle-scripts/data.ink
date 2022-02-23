@@ -13,6 +13,7 @@ Walking, walking...
 
 === Intro ===
 
+{speaker("alex", "neutral")}
 The clinging of metal work breaking the silence of dawn.
 A lone light slowly approached the settlement.
 //Here, maybe a sketchy light could be growing with every paragraph, as if Alex was getting closer and closer to the sceen
