@@ -1,6 +1,7 @@
 using Ink.Runtime;
 
 public enum DialogStatus {
+    next,
     dialog,
     choices,
     ending

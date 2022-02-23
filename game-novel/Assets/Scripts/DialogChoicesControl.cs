@@ -22,11 +22,16 @@ public class DialogChoicesControl {
     }
 
     public void ClearChoices() {
-        this.choicesBox.transform.GetChild(0).GetComponent<TMP_Text>().text = "";
-        this.choicesBox.transform.GetChild(1).GetComponent<TMP_Text>().text = "";
-        this.choicesBox.transform.GetChild(2).GetComponent<TMP_Text>().text = "";
+        for (int index = 0; index < this.ChildCount(); index++){
+            this.choicesBox.transform.GetChild(index).GetComponent<TMP_Text>().text = "";
+        }
+        
         this.continueButton.SetActive(true);
         this.choicesBox.SetActive(false);
+    }
+
+    public int ChildCount() {
+        return this.choicesBox.transform.childCount;
     }
 
     public bool IsChoiceValid(int index) {

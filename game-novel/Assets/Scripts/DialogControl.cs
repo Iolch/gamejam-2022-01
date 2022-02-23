@@ -56,11 +56,9 @@ public class DialogControl : MonoBehaviour
 
     private void InitStory() {
         this.story = new Story(script.text);
-        // this.speakerControl = new SpeakerControl(characterImage);
 
-        this.story.BindExternalFunction("Speaker", (string name, string emotion) => {
+        this.story.BindExternalFunction("speaker", (string name, string emotion) => {
             this.changeSpeakerEvent.Invoke(name, emotion);
-            // this.changeSpeakerEvent.Invoke(new SpeakerEventObject(name, emotion));
         });
         this.choicesControl = new DialogChoicesControl(story, choicesBox, continueButton);
         
@@ -93,7 +91,13 @@ public class DialogControl : MonoBehaviour
     }
 
     private void DisplayDialog() {
-        string text = story.Continue();
-        this.textBox.text = Helper.Format(text);
+        string text = Helper.Format(story.Continue());
+
+        if(text == "" || text == null){
+            this.NextDialog(); // gambiarra, não sei porque tá adicionando linha vazia
+        }else {
+            this.textBox.text = text;
+        }
+        
     }    
 }
