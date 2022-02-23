@@ -92,12 +92,6 @@ public class DialogControl : MonoBehaviour
 
     private void DisplayDialog() {
         string text = Helper.Format(story.Continue());
-
-        if(text == "" || text == null){
-            this.NextDialog(); // gambiarra, não sei porque tá adicionando linha vazia
-        }else {
-            this.textBox.text = text;
-        }
-        
+        this.textBox.text = text;
     }    
 }
