@@ -58,6 +58,8 @@ public class DialogControl : MonoBehaviour
             this.choicesControl.ClearChoices();
             this.story.ChooseChoiceIndex(index);
             this.NextDialog();
+        }else {
+            Debug.Log("Invalid choice index");
         }
     }
 
