@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -15,15 +16,24 @@ public enum TypeEmotions {
 
 public enum TypeCharacters {
     alex,
+    galego,
+    narrator,
+    mandacaru,
 }
 
 public class SpeakerControl : MonoBehaviour
 {
     public GameObject alex;
 
-    public Image characterImage;
+    public GameObject galego;
+
+    public GameObject mandacaru;
 
     public GameObject imageBox;
+
+    public Image characterImage;
+
+    public GameObject characterName;
 
     public Dictionary<string, TypeEmotions> emotions;
     public Dictionary<string, TypeCharacters> characters;
@@ -42,11 +52,22 @@ public class SpeakerControl : MonoBehaviour
     public void OnChangeSpeaker(string speakerName, string speakerEmotion) {
         switch(this.characters[speakerName]){
             case TypeCharacters.alex:
-                TypeEmotions emotion = this.emotions[speakerEmotion];
-                this.characterImage.sprite = this.alex.GetComponent<SpeakerAlex>().getSprite(emotion);
+                this.characterImage.sprite = this.alex.GetComponent<SpeakerAlex>().getSprite(this.emotions[speakerEmotion]);
+                this.characterName.transform.GetComponent<TMP_Text>().text = "Alex";
+                this.imageBox.SetActive(true);
+                break;
+            case TypeCharacters.galego:
+                this.characterImage.sprite = this.galego.GetComponent<SpeakerGalego>().getSprite(this.emotions[speakerEmotion]);
+                this.characterName.transform.GetComponent<TMP_Text>().text = "Galego";
+                this.imageBox.SetActive(true);
+                break;
+            case TypeCharacters.mandacaru:
+                this.characterImage.sprite = this.mandacaru.GetComponent<SpeakerMandacaru>().getSprite(this.emotions[speakerEmotion]);
+                this.characterName.transform.GetComponent<TMP_Text>().text = "Mandacaru";
                 this.imageBox.SetActive(true);
                 break;
             default:
+                this.characterName.transform.GetComponent<TMP_Text>().text = "";
                 this.imageBox.SetActive(false);
                 break;
         }
@@ -67,5 +88,8 @@ public class SpeakerControl : MonoBehaviour
         this.characters = new Dictionary<string, TypeCharacters>();
 
         this.characters.Add("alex", TypeCharacters.alex);
+        this.characters.Add("galego", TypeCharacters.galego);
+        this.characters.Add("narrator", TypeCharacters.narrator);
+        this.characters.Add("mandacaru", TypeCharacters.mandacaru);
     }
 }

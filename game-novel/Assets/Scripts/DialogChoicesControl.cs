@@ -18,16 +18,23 @@ public class DialogChoicesControl {
     }
 
     public void SetChoice(Choice choice) {
-        this.choicesBox.transform.GetChild(choice.index).GetComponent<TMP_Text>().text = Helper.Format(choice.text);
+        this.choicesBox.transform.GetChild(choice.index).GetChild(0).GetComponent<TMP_Text>().text = Helper.Format(choice.text);
+    }
+
+    public void LoadChoices() {
+        this.continueButton.SetActive(false);
+
+        for (int index = 0; index < this.story.currentChoices.Count; index++){
+            this.choicesBox.transform.GetChild(index).gameObject.SetActive(true);
+        }
     }
 
     public void ClearChoices() {
-        for (int index = 0; index < this.ChildCount(); index++){
-            this.choicesBox.transform.GetChild(index).GetComponent<TMP_Text>().text = "";
-        }
-        
         this.continueButton.SetActive(true);
-        this.choicesBox.SetActive(false);
+
+        for (int index = 0; index < this.ChildCount(); index++){            
+            this.choicesBox.transform.GetChild(index).gameObject.SetActive(false);
+        }
     }
 
     public int ChildCount() {

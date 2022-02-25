@@ -15,10 +15,14 @@ public class DialogControl : MonoBehaviour
     public UnityEvent endGameEvent;
     public UnityEvent initGameEvent;
     public SpeakerEvent changeSpeakerEvent;
+    public BackgroundEvent changeBackgroundEvent;
 
     //UIS REFERENCES
 
     public TMP_Text textBox;
+    public GameObject choice1;
+    public GameObject choice2;
+    public GameObject choice3;
     public GameObject choicesBox;
     public GameObject continueButton;
 
@@ -40,7 +44,10 @@ public class DialogControl : MonoBehaviour
             this.changeSpeakerEvent = new SpeakerEvent();
         }
 
-        
+        if(this.changeBackgroundEvent == null){
+            this.changeBackgroundEvent = new BackgroundEvent();
+        }   
+
         this.InitStory();
         this.initGameEvent.Invoke();
     }
@@ -69,6 +76,11 @@ public class DialogControl : MonoBehaviour
         this.story.BindExternalFunction("speaker", (string name, string emotion) => {
             this.changeSpeakerEvent.Invoke(name, emotion);
         });
+
+        this.story.BindExternalFunction("background", (string name) => {
+            this.changeBackgroundEvent.Invoke(name);
+        });
+
         this.choicesControl = new DialogChoicesControl(story, choicesBox, continueButton);
         
         this.NextDialog();
@@ -91,8 +103,7 @@ public class DialogControl : MonoBehaviour
     }
 
     private void DisplayChoices() {
-        this.choicesBox.SetActive(true);
-        this.continueButton.SetActive(false);
+        this.choicesControl.LoadChoices();
 
         foreach (Choice choice in this.story.currentChoices){
             this.choicesControl.SetChoice(choice);
