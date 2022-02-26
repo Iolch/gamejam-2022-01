@@ -9,8 +9,10 @@ public class SpeakerMandacaru : MonoBehaviour {
     public Sprite Smile;
     public Sprite Angry;
     public Sprite Neutral;
+    public Sprite Confuse;
     public Sprite Disdain;
     public Sprite Laughing;
+    public Sprite Surprise;
 
     public Sprite getSprite(TypeEmotions emotion){
         switch(emotion) {
@@ -22,6 +24,10 @@ public class SpeakerMandacaru : MonoBehaviour {
                 return this.Angry;
             case TypeEmotions.disdain:
                 return this.Disdain;
+            case TypeEmotions.confuse:
+                return this.Confuse;
+            case TypeEmotions.surprise:
+                return this.Surprise;
             case TypeEmotions.laughing:
                 return this.Laughing;
             default:

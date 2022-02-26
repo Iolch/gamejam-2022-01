@@ -47,5 +47,7 @@ MonoBehaviour:
   Smile: {fileID: 21300000, guid: 757a30d274c40644e8c3aa4bec5bea28, type: 3}
   Angry: {fileID: 21300000, guid: e1c9b88632d93904a89c0f38770e06dc, type: 3}
   Neutral: {fileID: 21300000, guid: 5fcbcd8d7bb824a4cbb53540d7f0bdee, type: 3}
+  Confuse: {fileID: 21300000, guid: 2e99ef57b24f27f4895a321e87b55204, type: 3}
   Disdain: {fileID: 21300000, guid: 3f71ebdc5b85d7b48b207463851025f0, type: 3}
   Laughing: {fileID: 21300000, guid: 1027fe61a93f5d74f8d5e162480f314f, type: 3}
+  Surprise: {fileID: 21300000, guid: 8275528734698fd4389577101fb86ef0, type: 3}

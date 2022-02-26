@@ -17,6 +17,16 @@ public class DialogChoicesControl {
         this.continueButton = continueButton;
     }
 
+    public void HoverChoice(int index) {
+        this.choicesBox.transform.GetChild(index).GetChild(0).GetComponent<TMP_Text>().fontSize = 15;
+        this.choicesBox.transform.GetChild(index).GetChild(1).GetChild(0).gameObject.SetActive(true);
+    }
+
+    public void HoverOutChoice(int index) {
+        this.choicesBox.transform.GetChild(index).GetChild(0).GetComponent<TMP_Text>().fontSize = 12;
+        this.choicesBox.transform.GetChild(index).GetChild(1).GetChild(0).gameObject.SetActive(false);
+    }
+
     public void SetChoice(Choice choice) {
         this.choicesBox.transform.GetChild(choice.index).GetChild(0).GetComponent<TMP_Text>().text = Helper.Format(choice.text);
     }
@@ -34,6 +44,7 @@ public class DialogChoicesControl {
 
         for (int index = 0; index < this.ChildCount(); index++){            
             this.choicesBox.transform.GetChild(index).gameObject.SetActive(false);
+            this.HoverOutChoice(index);
         }
     }
 

@@ -14,15 +14,16 @@ public class DialogControl : MonoBehaviour
     public TextAsset script;
     public UnityEvent endGameEvent;
     public UnityEvent initGameEvent;
+    public UnityEvent hoverChoiceEvent;
+    public UnityEvent clickButtonEvent;
+    public UnityEvent hoverButtonEvent;
+    public UnityEvent hoverOutButtonEvent;
     public SpeakerEvent changeSpeakerEvent;
     public BackgroundEvent changeBackgroundEvent;
 
     //UIS REFERENCES
 
     public TMP_Text textBox;
-    public GameObject choice1;
-    public GameObject choice2;
-    public GameObject choice3;
     public GameObject choicesBox;
     public GameObject continueButton;
 
@@ -32,21 +33,29 @@ public class DialogControl : MonoBehaviour
 
     // Start is called before the first frame update
     public void Start() {
-        if(this.endGameEvent == null){
-            this.endGameEvent = new UnityEvent();
-        }
+        // if(this.endGameEvent == null){
+        //     this.endGameEvent = new UnityEvent();
+        // }
 
-        if(this.initGameEvent == null){
-            this.initGameEvent = new UnityEvent();
-        }
+        // if(this.initGameEvent == null){
+        //     this.initGameEvent = new UnityEvent();
+        // }
 
-        if(this.changeSpeakerEvent == null){
-            this.changeSpeakerEvent = new SpeakerEvent();
-        }
+        // if(this.clickButtonEvent == null){
+        //     this.clickButtonEvent = new UnityEvent();
+        // }
 
-        if(this.changeBackgroundEvent == null){
-            this.changeBackgroundEvent = new BackgroundEvent();
-        }   
+        // if(this.hoverChoiceEvent == null){
+        //     this.hoverChoiceEvent = new UnityEvent();
+        // }
+
+        // if(this.changeSpeakerEvent == null){
+        //     this.changeSpeakerEvent = new SpeakerEvent();
+        // }
+
+        // if(this.changeBackgroundEvent == null){
+        //     this.changeBackgroundEvent = new BackgroundEvent();
+        // }   
 
         this.InitStory();
         this.initGameEvent.Invoke();
@@ -57,6 +66,7 @@ public class DialogControl : MonoBehaviour
     }
 
     public void OnContinue() {
+        this.clickButtonEvent.Invoke();
         this.NextDialog();
     }
 
@@ -114,4 +124,17 @@ public class DialogControl : MonoBehaviour
         string text = Helper.Format(story.Continue());
         this.textBox.text = text;
     }    
+
+    public void OnHoverChoice(int index)
+    {
+        this.choicesControl.HoverChoice(index);
+        this.hoverButtonEvent.Invoke();
+        this.hoverChoiceEvent.Invoke();
+    }
+
+    public void OnHoverOutChoice(int index)
+    {
+        this.choicesControl.HoverOutChoice(index);
+        this.hoverOutButtonEvent.Invoke();
+    }
 }

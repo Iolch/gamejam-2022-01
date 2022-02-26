@@ -414,7 +414,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The Game
+  m_text: Candeeiro
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 64e6e69c44e70ca42aa5da46cc7b0e80, type: 2}
   m_sharedMaterial: {fileID: 5256222365657084284, guid: 64e6e69c44e70ca42aa5da46cc7b0e80, type: 2}

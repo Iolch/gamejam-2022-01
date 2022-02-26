@@ -10,8 +10,10 @@ public enum TypeEmotions {
     smile,
     angry,
     neutral,
+    confuse,
     disdain,
     laughing,
+    surprise,
 }
 
 public enum TypeCharacters {
@@ -81,7 +83,9 @@ public class SpeakerControl : MonoBehaviour
         this.emotions.Add("angry", TypeEmotions.angry);
         this.emotions.Add("neutral", TypeEmotions.neutral);
         this.emotions.Add("disdain", TypeEmotions.disdain);
+        this.emotions.Add("confuse", TypeEmotions.confuse);
         this.emotions.Add("laughing", TypeEmotions.laughing);
+        this.emotions.Add("surprise", TypeEmotions.surprise);
     }
 
     private void InitCharacters() {

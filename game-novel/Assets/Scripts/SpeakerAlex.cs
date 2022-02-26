@@ -9,8 +9,10 @@ public class SpeakerAlex : MonoBehaviour {
     public Sprite Smile;
     public Sprite Angry;
     public Sprite Neutral;
+    public Sprite Confuse;
     public Sprite Disdain;
     public Sprite Laughing;
+    public Sprite Surprise;
 
     public Sprite getSprite(TypeEmotions emotion){
         switch(emotion) {
@@ -20,6 +22,10 @@ public class SpeakerAlex : MonoBehaviour {
                 return this.Smile;
             case TypeEmotions.angry:
                 return this.Angry;
+            case TypeEmotions.confuse:
+                return this.Confuse;
+            case TypeEmotions.surprise:
+                return this.Surprise;
             case TypeEmotions.disdain:
                 return this.Disdain;
             case TypeEmotions.laughing:
