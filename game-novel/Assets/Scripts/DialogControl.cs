@@ -14,6 +14,7 @@ public class DialogControl : MonoBehaviour
     public TextAsset script;
     public UnityEvent endGameEvent;
     public UnityEvent initGameEvent;
+    public UnityEvent hideNameEvent;
     public UnityEvent hoverChoiceEvent;
     public UnityEvent clickButtonEvent;
     public UnityEvent hoverButtonEvent;
@@ -33,30 +34,6 @@ public class DialogControl : MonoBehaviour
 
     // Start is called before the first frame update
     public void Start() {
-        // if(this.endGameEvent == null){
-        //     this.endGameEvent = new UnityEvent();
-        // }
-
-        // if(this.initGameEvent == null){
-        //     this.initGameEvent = new UnityEvent();
-        // }
-
-        // if(this.clickButtonEvent == null){
-        //     this.clickButtonEvent = new UnityEvent();
-        // }
-
-        // if(this.hoverChoiceEvent == null){
-        //     this.hoverChoiceEvent = new UnityEvent();
-        // }
-
-        // if(this.changeSpeakerEvent == null){
-        //     this.changeSpeakerEvent = new SpeakerEvent();
-        // }
-
-        // if(this.changeBackgroundEvent == null){
-        //     this.changeBackgroundEvent = new BackgroundEvent();
-        // }   
-
         this.InitStory();
         this.initGameEvent.Invoke();
     }
@@ -90,6 +67,11 @@ public class DialogControl : MonoBehaviour
         this.story.BindExternalFunction("background", (string name) => {
             this.changeBackgroundEvent.Invoke(name);
         });
+
+        this.story.BindExternalFunction("hideName", () => {
+            this.hideNameEvent.Invoke();
+        });
+
 
         this.choicesControl = new DialogChoicesControl(story, choicesBox, continueButton);
         

@@ -18,8 +18,11 @@ public enum TypeEmotions {
 
 public enum TypeCharacters {
     alex,
+    villan,
     galego,
+    nonill,
     narrator,
+    darkAlex,
     mandacaru,
 }
 
@@ -27,11 +30,17 @@ public class SpeakerControl : MonoBehaviour
 {
     public GameObject alex;
 
+    public GameObject villan;
+
+    public GameObject nonill;
+
     public GameObject galego;
 
     public GameObject mandacaru;
 
     public GameObject imageBox;
+
+    public GameObject darkAlex;
 
     public Image characterImage;
 
@@ -54,17 +63,32 @@ public class SpeakerControl : MonoBehaviour
     public void OnChangeSpeaker(string speakerName, string speakerEmotion) {
         switch(this.characters[speakerName]){
             case TypeCharacters.alex:
-                this.characterImage.sprite = this.alex.GetComponent<SpeakerAlex>().getSprite(this.emotions[speakerEmotion]);
+                this.characterImage.sprite = this.alex.GetComponent<SpeakerEmotion>().getSprite(this.emotions[speakerEmotion]);
                 this.characterName.transform.GetComponent<TMP_Text>().text = "Alex";
                 this.imageBox.SetActive(true);
                 break;
+            case TypeCharacters.villan:
+                this.characterImage.sprite = this.villan.GetComponent<SpeakerEmotion>().getSprite(this.emotions[speakerEmotion]);
+                this.characterName.transform.GetComponent<TMP_Text>().text = "Dukmar";
+                this.imageBox.SetActive(true);
+                break;
             case TypeCharacters.galego:
-                this.characterImage.sprite = this.galego.GetComponent<SpeakerGalego>().getSprite(this.emotions[speakerEmotion]);
+                this.characterImage.sprite = this.galego.GetComponent<SpeakerEmotion>().getSprite(this.emotions[speakerEmotion]);
                 this.characterName.transform.GetComponent<TMP_Text>().text = "Galego";
                 this.imageBox.SetActive(true);
                 break;
+            case TypeCharacters.nonill:
+                this.characterImage.sprite = this.nonill.GetComponent<SpeakerEmotion>().getSprite(this.emotions[speakerEmotion]);
+                this.characterName.transform.GetComponent<TMP_Text>().text = "Nonill";
+                this.imageBox.SetActive(true);
+                break;
+            case TypeCharacters.darkAlex:
+                this.characterImage.sprite = this.darkAlex.GetComponent<SpeakerEmotion>().getSprite(this.emotions[speakerEmotion]);
+                this.characterName.transform.GetComponent<TMP_Text>().text = "Dukmar";
+                this.imageBox.SetActive(true);
+                break;
             case TypeCharacters.mandacaru:
-                this.characterImage.sprite = this.mandacaru.GetComponent<SpeakerMandacaru>().getSprite(this.emotions[speakerEmotion]);
+                this.characterImage.sprite = this.mandacaru.GetComponent<SpeakerEmotion>().getSprite(this.emotions[speakerEmotion]);
                 this.characterName.transform.GetComponent<TMP_Text>().text = "Mandacaru";
                 this.imageBox.SetActive(true);
                 break;
@@ -92,8 +116,15 @@ public class SpeakerControl : MonoBehaviour
         this.characters = new Dictionary<string, TypeCharacters>();
 
         this.characters.Add("alex", TypeCharacters.alex);
+        this.characters.Add("villan", TypeCharacters.villan);
         this.characters.Add("galego", TypeCharacters.galego);
+        this.characters.Add("nonill", TypeCharacters.nonill);
         this.characters.Add("narrator", TypeCharacters.narrator);
+        this.characters.Add("dark-alex", TypeCharacters.darkAlex);
         this.characters.Add("mandacaru", TypeCharacters.mandacaru);
+    }
+
+    public void OnHideName() {
+        this.characterName.transform.GetComponent<TMP_Text>().text = "";
     }
 }

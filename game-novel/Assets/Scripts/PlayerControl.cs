@@ -5,6 +5,8 @@ using System.Collections.Generic;
 
 public class PlayerControl : MonoBehaviour
 {
+    public AudioSource endSource;
+
     public AudioSource menuSource;
 
     public AudioSource[] triagleNotes;
@@ -15,6 +17,12 @@ public class PlayerControl : MonoBehaviour
     {
         menuSource.loop = true;
         menuSource.Play();
+    }
+
+    public void OnEndGame()
+    {
+        endSource.loop = true;
+        endSource.Play();
     }
 
     public void OnHoverChoice()
