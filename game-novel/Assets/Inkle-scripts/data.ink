@@ -71,7 +71,7 @@ Curiously enough, there's only a handful of conventional houses, built from bric
 Rather, the vast majority of housing is composed by what could be explained as improvised shelter: fabric tents, hay woods and stationary caravans flood the land that otherwise would seemingly be empty.
 Since it's early, not many people are wandering out of their cozy huts.
 Thanks to your eyes, which, according to your old man, can see much more than anyone else's,
-you spot some movement towards a tall building, one of the few made with stone, what makes you presume it's one of the village original buildings.
+You spot some movement towards a tall building, one of the few made with stone, what makes you presume it's one of the village original buildings.
 You decide to investigate.
 +[Approach the building]
 ->Approachingchurch
@@ -87,10 +87,11 @@ At its front, a small group of people were either sitting or kneeling in a semic
 You get even closer, and then, a man in white robes with a three-colors jeweled hat suddenly stops what you presume were whispering dialogues. 
 His eyes meet yours, and his mouth is kept open.
 Noticing the silence, the low headed crowd turn their heads to you. 
-Some stay in place, 
-some suddenly get up and hide, 
-and a single man steadily raises and walks towards you, hand resting on his sword's hilt.
+Some stay in place... 
+Some suddenly get up and hide... 
+...and a single man steadily raises and walks towards you, hand resting on his sword's hilt.
 {speaker("alex", "surprise")}
+{hideName()}
 You gasp. 
 {speaker("narrator", "neutral")}
 He seems to notice that, and hesitates one step.
@@ -111,6 +112,7 @@ Paladin in service of the Three Goddesses Church.
 "I'm a metal person?"
 
 {speaker("galego", "disdain")} 
+{hideName()}
 The tall armored warrior notices the lack of confidence in your words. You feel his gaze getting increasingly inquisitive.
 
 *[What's wrong?]
@@ -200,28 +202,38 @@ And, frankly, the most plausible reason for someone to come around here.
 ->whatswrongquestions
 
 ==1sttalktogalpal==
+{speaker("narrator", "neutral")}
 After such explanations, something inside you begins to believe this "Etrmnuk" is what's calling you. As such, you decide to follow the silent voice.
 
 {speaker("alex", "neutral")}
 "I'm going there, Mister Galego! Do you know where's the entrance?"
 
 {speaker("galego", "neutral")} 
-"As a matter of fact, I do. But I must warn you: It is shut sealed."
+"As a matter of fact, I do.
+But I must warn you: It is shut sealed."
 
-{speaker("alex", "neutral")}
+{speaker("alex", "confuse")}
 "Have you tried to enter it then?"
 
+{speaker("galego", "surprise")} 
+"Nay..." 
 {speaker("galego", "neutral")} 
-"Nay... If there was a way, every single schoolar around here would be there already, as if ants on a sweetroll. Or maybe on a rapadura"
+"If there was a way, every single schoolar around here would be there already, as if ants on a sweetroll." 
+{speaker("galego", "surprise")} 
+"Or maybe on a rapadura"
 
 {speaker("alex", "neutral")}
-"I see... Well, I think I will take a look at this entrance. Could you take me there?"
+"I see..." 
+"Well, I think I will take a look at this entrance." 
+{speaker("alex", "smile")}
+"Could you take me there?"
 
 {speaker("galego", "smile")} 
-"Certainly, automation boy. Come, follow my steps."
-
+"Certainly, automation boy." 
+"Come, follow my steps."
+    *[Follow Galego]
 {speaker("narrator", "neutral")}
-You must confess you don't like being called an "automation boy", but you guess he meant no harm with that comment.
+- You must confess you don't like being called an "automation boy", but you guess he meant no harm with that comment.
 
 He then turns around and steadily walks toward the tower, as if marching.
 
@@ -231,7 +243,7 @@ He then turns around and steadily walks toward the tower, as if marching.
 ==Ruins==
 {background("ruins")}
 {speaker("narrator", "neutral")}
-You and Lucius arrive at the ruins surrounding the tower's base.
+You and Galego arrive at the ruins surrounding the tower's base.
 
 The architecture looks definitely older than the tower itself, and the vast majority of buildings has been lost to time.
 
@@ -249,9 +261,10 @@ You feel like something about it resonates with you.
 You and Lucius walk straight to that gate,
 ocasionally contemplating the sight around while keeping a steady pace.
 Eight or so meters before the gate, you hear a voice.
-
+{speaker("mandacaru", "neutral")}
+{hideName()}
 "Halt!" a feminine voice says. 
-A tall young woman with long brown curls, partially covered by a pointy hat appears. 
+A tall young woman with long brown curls, partially covered by a pointy hat appears.
 She has dark skin with contrasting golden jewlery wrapped around her delicated neck.
 The shining of the gold, however, is agressively ofuscated by her piercing amber eyes, striking so deeply you think you feel the flame in your core flick for a second.
 {speaker("mandacaru", "neutral")}
@@ -279,11 +292,12 @@ Galego looks somewhat irritated.
 "And, to answer question: by my own." 
 {speaker("mandacaru", "neutral")}
 "I'm a powerful woman with ambitious desires, if you haven't noticed!"
-
+{hideName()}
 Suddenly, she seems to get interested in you.
 {speaker("mandacaru", "surprise")}
 "And I don't suppose this exotic fine piece of craft belongs to you, right?"
-{speaker("narrator", "neutral")}
+{speaker("alex", "surprise")}
+{hideName()}
 You're taken by surprise.
     * [Present yourself]
 {speaker("alex", "surprise")}
@@ -341,8 +355,9 @@ Her gaze shift at you again.
 "I don't think I have one?"
 
 {speaker("mandacaru", "confuse")}
+{hideName()}
 The young mage raises an eyebrow without letting go of the smug.
-
+{speaker("mandacaru", "confuse")}
 "Oh?" 
 {speaker("mandacaru", "surprise")}
 "Now that's curious."
@@ -365,9 +380,11 @@ You feel those words affecting you, as if they pierced through your defences and
 A very uncomfortable sensation.
 
 {speaker("mandacaru", "confuse")}
+{hideName()}
 Whatever expression you made, Mandacaru noticed. 
 
 {speaker("mandacaru", "disdain")}
+{hideName()}
 With a gesture of her hand, she took the water out of Galego's canteen.
 Making it float in place like a dense bubble,
 and then,
@@ -382,10 +399,12 @@ pushing her body foward, she threw it at Galego's face.
 "You bad influence!"
 
 {speaker("alex", "surprise")}
+{hideName()}
 You are taken by surprise, so your reaction is to gasp.
 {speaker("narrator", "neutral")}
 But, for some reason, you found comfort in that...
 {speaker("alex", "smile")}
+{hideName()}
 ... and have to hold a laugh after seeing Galego's expression.
     *[ I feel a call from this place.]
 {speaker("alex", "neutral")}
@@ -433,8 +452,9 @@ After what could be a couple of minutes, Mandacaru asks perplexed.
 "And then I touched it, and it did open..."
 
 {speaker("mandacaru", "smile")}
+{hideName()}
 Mandacaru smiles.
-
+{speaker("mandacaru", "smile")}
 "Well, I don't know who to credit for creating you, but I think we may very well just have found the purpose!"
 
 {speaker("mandacaru", "neutral")}
@@ -610,8 +630,9 @@ It slowly gets towards the first division of the maze, and them, it fades out fo
 - "So... What do we do now?"
 
 {speaker("mandacaru", "surprise")}
+{hideName()}
 Mandacaru seems surprised.
-
+{speaker("mandacaru", "surprise")}
 "Hmm... It seems like your connection with this place exists indeed, but is too weak for the spell to work properly."
 
 {speaker("mandacaru", "confuse")}
@@ -625,8 +646,9 @@ You are really not sure of the implications of that.
 "Could it not be that this spell of yours simply failed?"
 
 {speaker("mandacaru", "disdain")}
+{hideName()}
 Mandacaru's amber eyes gaze at Galego as if she was shooting arrows at the paladin.
-
+{speaker("mandacaru", "disdain")}
 "That's most definitely not the case!"
 
 "The spell was pretty simple, and the simpler the spell, the less you can go wrong with it."
@@ -688,9 +710,9 @@ There are three entrances available from where you are:
 
 Foward, straight in the corridor;
 
-Left, at a ninety degrees curve; and 
+Left, at a ninety degrees curve; 
 
-Right, at a more gentle curve, with the wall slightly bending at the top.
+and Right, at a more gentle curve, with the wall slightly bending at the top.
 
 Which way you feel like going?
 +Take the Left path
@@ -777,7 +799,8 @@ You even feel like commemorating.
 {speaker("galego", "neutral")}
 "It seems so."
 {speaker("galego", "surprise")}
-"Thank the Goddesses, that place was not making any good for my mind."
+"Thank the Goddesses" 
+"That place was not making any good for my mind."
 
 {speaker("mandacaru", "neutral")}
 "What's the matter, you two? Not fans of puzzles?"
@@ -824,7 +847,9 @@ You even feel like commemorating.
 "I would love to see if the Goddesses you keep talking about would intervene!"
 
 {speaker("narrator", "neutral")}
-The situation is quickly escaping control. You feel nervous... Anxious?
+The situation is quickly escaping control.
+You feel nervous...
+Anxious?
 
 The flame in your core flicks and bursts in short intervals.
 
@@ -858,10 +883,12 @@ You can't seem to understand why they're fighting so suddenly, just like that.
 
 At the same time, you feel no matter the reason, that is going too far to be justified by any of them.
 
-{speaker("mandacaru", "neutral")}
+{speaker("mandacaru", "angry")}
+{hideName()}
 Mandacaru begins gesticulating with her hand, charging a spell while backstepping. 
 
 {speaker("galego", "angry")}
+{hideName()}
 In response, Galego draws his sword and quickly approaches the mage girl.
     *[Say something]
 {speaker("alex", "sad")}
@@ -872,8 +899,10 @@ You yell out loud.
 
 That was enough to stall the brawl. 
 {speaker("mandacaru", "surprise")}
+{hideName()}
 They look at you surprised,
 {speaker("galego", "surprise")}
+{hideName()}
 slowly turning their bodies to your direction.
 
 {speaker("narrator", "neutral")}
@@ -905,11 +934,11 @@ They come closer crouching a bit to get their eyes to meet yours.
 - "I don't want to be a bot! I don't want to be a automation!" you exclaim, taking them by surprise.
 
 "I want to be a person!" 
-"A real one," 
-"with flesh" 
-"and tears" 
-"and heart" 
-"and soul!" 
+"A real one..." 
+"...with flesh..." 
+"...and tears..." 
+"...and heart..." 
+"...and soul!" 
 
 {speaker("narrator", "neutral")}
 
@@ -943,7 +972,7 @@ Then you notice her arms are wrapped around your small frame.
 Your eyesight begins to fickle again.
 But this time, it feels warmer
 * [Hug her back]
-- and you decide to hug her back.
+- ...and you decide to hug her back.
 
 You spent near a minute like that, before you're able to get up.
 ->after_hug
@@ -1011,7 +1040,7 @@ On top of that, the city is illuminated by a dime gloomy glow, as if a thin curt
 
 "Apparently, at one point, they went all in with the project, and migrated the whole population to the tower."
 {speaker("mandacaru", "surprise")}
-"I've always asked myself if that was just a myth, but seeing after seeing this, I think the legends were true."
+"I've always asked myself if that was just a myth, but after seeing this, I think the legends were true."
 
 "I mean, look at the size of this place!"
 
@@ -1030,8 +1059,9 @@ On top of that, the city is illuminated by a dime gloomy glow, as if a thin curt
 
 "The most I found came basically as oral tradition."
 
-"The descendants of the descendants of the people that cohexisted with the Enkandeanos, mainly.
+"The descendants of the descendants of the people that cohexisted with the Enkandeanos, mainly."
 
+{speaker("mandacaru", "smile")}
 "With all due respect to bards, they make for great tales, but they aren't the best for studying."
 
 "And a few geological and archeological evidence here and there, but way too far in between for my liking."
@@ -1085,7 +1115,7 @@ Comming here was worth it, if just by the view.
 - "What do you mean?" you ask, taken by curiosity.
 
 {speaker("galego", "neutral")}
-"This tower waas built in such a way as to pierce the heavens!"
+"This tower was built in such a way as to pierce the heavens!"
 
 "There live the Divine, and as one should expect, barging uninvited into the lair of the Goddesses in that manner is a grave sin all by itself."
 {speaker("galego", "disdain")}
@@ -1123,20 +1153,22 @@ Comming here was worth it, if just by the view.
 "Oh yeah? Go ahead and explain us why none of that would be the case."
 
 {speaker("galego", "neutral")}
-"See those military buildings?" he points to what uou assume used to be barracks.
 
-"No walls dented, no doors broken, no towers breeched. Everything is in pristine condition, with no signs of conflict whatsoever".
+"See those military buildings?" he points to what you assume used to be barracks.
+
+"No walls dented, no doors broken, no towers breeched." 
+"Everything is in pristine condition, with no signs of conflict whatsoever".
 
 "Actually, this apply to all buildings around us."
 
 "Nothing looks like it was even attempted to be breached."
-
+{hideName()}
 He then points to the temples.
-
+{speaker("galego", "neutral")}
 "You can still see the gold ornaments and the jewelled knobs of the intricate rich doors."
 
 "No matter how big of a sin stealing from a temple may be, when war rages and misery strikes..."
-{speaker("galego", "surprise")}
+{speaker("galego", "neutral")}
 "People rather take what they can and burn in the afterlife than die feeling the burn of their empty somachs trying to eat themlseves from inside out."
 
 "All of that while getting too weak to fight back, often too weak to even remain conscious as they're finally dying."
@@ -1144,7 +1176,6 @@ He then points to the temples.
 "I've seen it all too many times already."
 {speaker("galego", "neutral")}
 "Also, no corpses at all."
-
 "We will find one or other if we look for it, of that I doubt not."
 
 "But if what drawed this civilization's last breath were to be any of what you said..."
@@ -1155,10 +1186,11 @@ He then points to the temples.
 
 "Some would fight to their last breath, others would desperately seek one last prayer seeking divine help."
 
+{speaker("galego", "surprise")}
 "I may not be fairly knowledgeble about the Enkandeano Empire, nor about archeology as a whole..."
-
+{speaker("galego", "neutral")}
 "But I have been to nations ravaged by war, illness and famine all too often on missions for the Church."
-
+{speaker("galego", "confuse")}
 "Ive's seen the signs of a crumbling civilization before. This one shows none of them."
 
 {speaker("narrator", "neutral")}
@@ -1166,7 +1198,8 @@ You nod. That explanation sounds logical to you.
 
 Curious, you look at Mandacaru's face to see her reaction.
 
-{speaker("mandacaru", "neutral")}
+{speaker("mandacaru", "surprise")}
+{hideName()}
 For the first time since you first met, she's been left speechless.
 
 You guess she wasn't expecting Galego's deduction to be reasoning and plausible, and it caught her off guard.
@@ -1180,6 +1213,7 @@ You guess she wasn't expecting Galego's deduction to be reasoning and plausible,
 "I see yout point."
 
 {speaker("galego", "smile")}
+{hideName()}
 Galego keeps his stoic face. You do, however, think you may have noticed a faint spark of a well hidden smile beginning to develop on his lips.
 
 ->cityquestions1
@@ -1210,10 +1244,13 @@ You've never seen a large city before, so you don't know how this one compares t
 Judging by Mandacaru and Galego's faces, you assume they're as impressed being here as your are.
     *[I've never been in a city...]
 {speaker("alex", "neutral")}
-- "So... I've never been in a city before..."
+- "So..." 
 
+{speaker("alex", "smile")}
+"I've never been in a city before..."
+{speaker("alex", "neutral")}
 "I mean, the largest one I've seen before was that village we met".
-
+{speaker("alex", "confuse")}
 "Are they as big as this one?"
 
 {speaker("narrator", "neutral")}
@@ -1221,19 +1258,22 @@ They both look a bit surprised.
 
 {speaker("galego", "confuse")}
 "Well, the big capitals certainly rival this one. Some probably are even bigger."
-{speaker("galego", "neutral")}
+{speaker("galego", "smile")}
 "But most don't, and certainly, not inside another building."
 
 {speaker("mandacaru", "neutral")}
 "Do you remember where you were made, Alex?"
     *[I'm not sure...]
-{speaker("alex", "neutral")}
+{speaker("alex", "confuse")}
 - "I'm not sure..."
 
-"My oldest memory is... Me getting up from a collaped hut, I guess?"
+"My oldest memory is..." 
+{speaker("alex", "neutral")}
+"Me getting up from a collaped hut, I guess?"
 
+{speaker("alex", "smile")}
 "Then staring at the night sky for the first time..."
-
+{speaker("alex", "neutral")}
 "And starting walking to a direction I felt I was supposed to."
 
 "This very direction we are following right now."
@@ -1244,8 +1284,10 @@ They both look a bit surprised.
 {speaker("alex", "neutral")}
 -"No, I've stopped eventually."
 {speaker("alex", "confuse")}
-"Not much time after I first began walking, I... I think I got stuck in a deep mud pool in some woods, during a heavy storm."
-
+"Not much time after I first began walking... "
+"I..." 
+"I think I got stuck in a deep mud pool in some woods, during a heavy storm."
+{speaker("alex", "neutral")}
 "I began sinking on it, and the mud started entering my core." you point to the opening in your chest.
 {speaker("alex", "neutral")}
 "And there I remained, unable to get out."
@@ -1254,10 +1296,13 @@ They both look a bit surprised.
 
 "I probably must have fainted."
 
-"And I think I stayed like that for quite some time. How much, I don't really know..."
+"And I think I stayed like that for quite some time." 
 
+{speaker("alex", "confuse")}
+"How much, I don't really know..."
+{speaker("narrator", "neutral")}
 Your flame flicks, in short, unstable bursts.
-
+{speaker("alex", "neutral")}
 "But one day, I woke up."
 
 "And there was this mister... A old man."
@@ -1271,9 +1316,9 @@ Your flame flicks, in short, unstable bursts.
 "Said that my body was buried to the chest in the mud, and vines were wrapped around what wasn't."
 
 "He took me from there to his house, and cleaned me."
-
+{speaker("alex", "smile")}
 "He said he saw the flame in my chest, and, somehow, thought it was alive, but barely, but worth preserving."
-
+{speaker("alex", "neutral")}
 "That it burtn so fragile that he could've mistaken me with a ill newborn."
 
 "As he cleaned me, he saw the flame burning stronger every day, and that's how he knew what he was doing was right."
@@ -1296,7 +1341,7 @@ Your flame flicks, in short, unstable bursts.
 
 "That's soo sweet!"
 
-{speaker("galego", "neutral")}
+{speaker("galego", "smile")}
 "Indeed."
 
 {speaker("galego", "smile")}
@@ -1322,12 +1367,16 @@ Your flame flicks, in short, unstable bursts.
 "Said that this was his last chance."
 
 {speaker("galego", "neutral")}
-"I see.. Even the best of men are prone of making life-lasting mistakes."
+"I see.." 
+{speaker("galego", "sad")}
+"Even the best of men are prone of making life-lasting mistakes."
 
 {speaker("mandacaru", "sad")}
-Mandacaru asks aprehensibly:
-
-"So, what happened? What led you to leave your new house and come all the way here?"
+Mandacaru asks aprehensibly
+{hideName()}
+{speaker("mandacaru", "sad")}
+"So, what happened?" 
+"What led you to leave your new house and come all the way here?"
 
 {speaker("alex", "sad")}
 "Grandpa..."
@@ -1377,11 +1426,12 @@ You feel your blaze burn hurtfully, as if piercing something even deeper in you 
 "I've been going where my body guides me ever since, and this led me here, and now."
 
 {speaker("mandacaru", "sad")}
+{hideName()}
 You raise your eyes and find Mandacaru's face overflowing with tears.
 
 Her hands covering her mouth, eyes glistening.
 
-{speaker("galego", "neutral")}
+{speaker("galego", "sad")}
 "That hat..."
 
 "Did it belong to your grandpa?"
@@ -1395,11 +1445,12 @@ Her hands covering her mouth, eyes glistening.
 "... Understood."
 {speaker("galego", "smile")}
 "You are a good kid, alex.
-
+{hideName()}
 He says, as he taps your back.
+
 * [Thank him.]
 {speaker("alex", "neutral")}
-- "Thanks, mister Galego!
+- "Thanks, mister Galego!"
 
 {speaker("narrator", "neutral")}
 
@@ -1446,8 +1497,9 @@ There's a brief silence, before Mandacaru bursts laughing.
 "Isn't that a sin all by itself?"
 
 {speaker("galego", "angry")}
+{hideName()}
 His stoic face crumbles and he looks angry.
-
+{speaker("galego", "angry")}
 "It is true... I have been profering just and contempt words until now." 
 "But I have to face reality, as much as I may despise it:"
 
@@ -1473,12 +1525,13 @@ His stoic face crumbles and he looks angry.
 "I am not sure if They will forgive me, but I accept their judgement, nonetheless."
 
 {speaker("alex", "sad")}
+{hideName()}
 You're taken by surprise. You did not expect such terrible things be something that exists in this beautiful world."
 
-{speaker("alex", "neutral")}
+{speaker("alex", "sad")}
 "I see even you feel the godesses failed you."
     *[Why Mandacaru is so defiant to those who preach their word?]
-{speaker("alex", "neutral")}
+{speaker("alex", "confuse")}
 - "And what did happen for you to be so openly defiant to those who preach their word?"
 {speaker("mandacaru", "neutral")}
 "You remember those kids you mentioned, which the Goddesses abandoned?"
@@ -1516,8 +1569,8 @@ She tells the whole history while huging herself, crossing her arms.
 
 Maybe the information both Galego and Mandacaru gave intimidated each other or something like that, because you three keep walking without saying any more words for a while.
 
-After some minutes, you all arrive at a throne room.
 {background("throne")}
+After some minutes, you all arrive at a throne room.
 The ceiling is supported by curvy golden pillars of notably great craftsmanship. Tables, chairs and pictures fill the regal space.
 
 Your eyes dart straight foward, where they meet a fine throne with a frame of gold and a seat of silk.
@@ -1650,10 +1703,77 @@ Dukmar walks two more steps or so, and turns your body to them.
 "They would've fallen without me anyway." 
 "I had no heir at the time, and I rather they serve me one last time so I can achieve the long-lived dream of my people than let them kill each other."
 
-"But enough with your modern morals, were' close."
+{speaker("narrator", "neutral")}
+You're definitely not convinced of this argument. And your companions don't seem to be falling for it as well.
+
+{speaker("dark-alex", "neutral")}
+"You people are still ruled by kings, right?"
+
+"Say, your kingdom is met with famine. Insufferable, madness driving famine."
+
+"And that ends up not even being the biggest of your problems. The very cause of the famine is: drought."
+
+"Not only the people are weak for not having eaten in days, that won't even matter because they will die from thirst days before they would from hunger."
+
+"You then notice you know the way to make it stop: go upstream, straight to the source of it all, and seize the very power to change it."
+
+"The very power others are using to keep it like that."
+
+"Unfortunately, the one's that came before you, who had the same sacred, divine right and duty to reign-"
+
+"As divine as the right the Goddesses have to rule on their part -"
+
+"Falter, thus not achieving what they had to. Not fulfilling their duty to stop this madness."
+
+"So, when it comes your turn to rule... It is too late..."
+
+"All previous chances were lay to waste."
+
+"And now your only chance is to do all within your power to finish the task that should have been done far before you had even be birthed!"
+
+"By any means necessary!"
+
+"Don't you all see? The fault of all this..."
+
+"It lays both within the presumably omnipotent arms of the ones who choose to keep things that way on the grounds of being the divine thing to do"
+
+"And in the surprisingly weak arms of those who, faced with the chance to blow the winds of change, decided not to, afraid of it hitting their soil reaching wings!"
+
+"If both the Goddesses and the previous Kings failed their rightful, divine and sacred duties, then by the very same basis one adquires the right to cast them off of their posts!"
+
+"A break of dutiful path is bound to goad those who want to change the status quo to step in and do it."
+
+{speaker("galego", "angry")}
+"YOU SACRIFICED YOUR ENTIRE PEOPLE AND JUSTIFY IT AS FIGHTING DIVINE TIRANY?!" Galego yells.
+
+"Not only that constitutes the prime of heresy, but also a heresy driven genocide!"
+
+{speaker("dark-alex", "neutral")}
+"Haven't you heard any word that I profered, oh Dog of the Goddesses?"
+
+"Or is it that all you have so purposefully trained to do was to lick the wounds words causes on your owners, and pot trained against those who defy them?"
+
+"Sacrificing my entire people wasn't an easy choice, just the only one that would lead to the final outcome."
+
+"After I strike down those sitting at the Divine Throne and seize their power, I will use it to bring back all those brave souls that allowed me to win this war in the first place."
+
+"Know your place, servant of hypocrites."
+
+{speaker("galego", "angry")}
+"I will take you out from Alex and I will wipe you from any and every realm of the Goddesses' existence, biggest of heretics."
+
+{speaker("dark-alex", "neutral")}
+"I will love to see you weep after failing such promise, mongrel."
+
+"The world ill needs Goddesses that are a reflection of your pitiful image."
+
+"But enough with your templaric barking. We fast approach our destination."
+
 {speaker("narrator", "neutral")}
 You climb a bit more until you find a absurdly big golden gate, taller, wider and thicker than any other thus far. 
+
 Dukmar uses your hand to touch it, and it slowly opens.
+
 {background("tower_top")}
 Inside... You cannot describe it. It was as if the world was reaching a point where it was so high it was turning itself back down and going back.
 
@@ -1667,66 +1787,266 @@ One, you're in control of your body again.
 
 Two, Dukmar is right in front of you, now in flesh.
 
-He is tall and muscular, with dark, long hair and beard. His wide eyes darting over you, as if to pierce the shell.
+He is tall. Taller than any man or woman you've met so far on your journey.
+
+He is also very muscular, with dark, long hair and beard. His wide eyes darting over you, as if to pierce the hard shell.
+
 {speaker("villan", "smile")}
 "Greetings, everyone! Now I can be a proper host."
+
 {speaker("mandacaru", "surprise")}
 "What is this place?" Mandacaru asks, perplexed.
+
 {speaker("villan", "neutral")}
 "This is the place where the sky meets the earth, and the earth meets the sky."
 
 "It is the point of maximum convergence in our world, and the gateway to the Goddesses den."
+
 {speaker("narrator", "neutral")}
 He gesticulates, as if he had a invisible key and was trying to open a door. 
 From thin air, a ornamentated gate which the valor alone could probably buy entire kingdoms opens.
+
 {speaker("villan", "neutral")}
-"I'll get you all a reward. And paladin, be ready to meet your godesses"
+"I'll get you all a reward. And paladin-"
+
 {speaker("narrator", "neutral")}
-As you come by, you see the door opening in a exremely bright flash. When the light fades, you see... Nothing. Just empty space.
+His speech is cut short by a flash advancing straight to his direction.
+
+Wielding his sword with both hands, Galego leaps towards the Ancient King, using all his body and might into a definitive strike.
+
+{speaker("galego", "angry")}
+"HAAAAAAAAAAAAAAAAAAAAAAAAAAAA-"
+
+{speaker("galego", "surprise")}
+"-Uhh!"
+
+{speaker("narrator", "neutral")}
+With a single strike using the back of his main hand, Dukmar shatters both Galego's sword and bones.
+
+A vicious pummel that throws the paladin across the room, gasping for air, but instead, almost drowing into outbursting blood.
+
+{speaker("mandacaru", "sad")}
+As he rolls into the ground, Mandacaru witness the damned scene in terror, instintively raising her hand as to -
+
+{speaker("villan", "neutral")}
+"Don't even try it."
+
+{speaker("mandacaru", "surprise")}
+"...!!!"
+
+{speaker("narrator", "neutral")}
+The order pierces through Mandacaru's will. She freezes for a moment, before slowly regaining visual contact with Dukmar.
+
+You are completely moveless, not knowing how to react to such scenario.
+
+But before you find an answer, Dukmar proceeds.
+
+{speaker("villan", "neutral")}
+"Now that we are past those joyful, heartwarming greetings, it's time we finish this mission."
+
+{speaker("narrator", "neutral")}
+He approaches the great gate and touches it. An order echoes around the room, so strongly it echoes and reverbs across minds and bodies.
+
+And it seems it had the intended effect. You see the door opening in a exremely bright flash. When the light fades, you see... Nothing. Just empty space.
 
 Everyone got a surprised look on their face, but Dukmar is the one who is the most perplexed.
+
 {speaker("villan", "surprise")}
 "No... What?" 
 
 "No no no..."
+
 {speaker("villan", "angry")}
 "This can't be real!"
 
+"Where are they?"
+
 "The godesses were supposed to be here!" 
+
 "They were last time, I'm sure! I was so, so close..."
+
+"WHERE ARE YOU?"
+
+"I ORDER YOU TO PRESENT YOURSELVES AT ONCE!"
+
+"STOP THIS DIVINE DERELICTION AND FACE ME!"
+
     *[Did they leave?]
+    
 {speaker("alex", "confuse")}
-- "Did... Did they leave?" You ask.
+- "Did... Did they leave, then?" You ask.
+
 {speaker("narrator", "neutral")}
-Dukmar looks at you, with no idea what to do next.
+Dukmar looks at you, with no idea what to do next. His face holds both unholding fury and unconceivably despair.
+
 {speaker("villan", "neutral")}
-"That must be it... That has to be it"
+"NO! THAT'S IMPOSSIBLE!"
+
+"That can't be it!"
+
+"That..."
+
+"That must NOT BE IT!"
+
 {speaker("narrator", "neutral")}
-Galego steps in, with firm steps and a disappointed face.
+Galego steps in, hand holding his ribs, with firm, forced steps and a disappointed face on top of one full of pain.
+
 {speaker("galego", "sad")}
 "I... I can't believe it..."
 
 "Every line of the holy books about this place. Every description of the Holy City..."
 
-"There's nothing of that here." 
+{speaker("mandacaru", "sad")}
+"There's..."
+
+"There's nothing of that here, Galego..." 
+
+{speaker("galego", "sad")}
+"There must be an explanation..."
+
+{speaker("mandacaru", "sad")}
 "No Goddesses, no prayes being answered, no afterlife, nothing."
 
+"Not even power to seize..."
+
+
+{speaker("galego", "sad")}
 "For what did I fight all those years?"
- {speaker("narrator", "neutral")}
+
+{speaker("villan", "sad")}
+"Against what have I fought all those ages?"
+
+"..."
+
+{speaker("villan", "sad")}
+"This is not real..."
+
+{speaker("alex", "sad")}
+"The Goddesses?"
+
+{speaker("villan", "angry")}
+"EVERYTHING!" 
+
+"NOTHING!"
+
+"My life..."
+
+{speaker("galego", "sad")}
+"My... My whole life..."
+
+"Were they never real at all?"
+
+{speaker("narrator", "neutral")}
  Dukmar stares at Galego and begins weeping.
- {speaker("villan", "neutral")}
+
+{speaker("villan", "neutral")}
  "No! They were here! If they weren't even here to begin with, why the curse? Why even build the Etrmnuk?"
  
  "My entire civilization's purpose cannot be in vain!"
+ 
+"My entire plan can't be a failure by it's very nature!"
+
+"My people... Can't be gone forever, for nothing..."
+
  {speaker("galego", "sad")}
  "As much as it pains me saying this, having dedicated my entire life to them..."
- {speaker("villan", "sad")}
+
+ {speaker("galego", "sad")}
  "The Goddesses, the divine, everything... Now I know for sure, it is not real."
+
+{speaker("mandacaru", "sad")}
+"..."
+
+"I guess it explains why they never seemed to hear my prayers."
+
+"There was never anyone hearing, in the end."
+
+"I don't know how to feel about it..."
+
+"That afraid kid was alone all along, just as she suspected!"
+
+"Damn it!"
+
+
  {speaker("narrator", "neutral")}
- They spent some more time assimilating that their purposes all this time, both defying the divine and serving them, were built on lies.
+ Everybody spend some more time assimilating that their purposes all this time, both defying the divine and serving them, were built on lies.
  
- Mandacaru seems a bit disappointed as well, not having found any source of power to her.
+ But this moment will not last forever, you know it.
  
+ Having fufilled the objective you were created for, you wonder...
+ 
+ Have you just outlived your purpose?
+ 
+ Or perhaps have you finally adquired your humanity?
+ 
+ It doesn't feels like the latter, if you're to be honest with yourself.
+ 
+ {speaker("alex", "sad")}
+ "Now... What?"
+ 
+ Everybody looks aprehensibly to you. You immediately understand: no one got an aswer for this dreadful question.
+ 
+ {speaker("villan", "sad")}
+ I... Don't know...
+ 
+ "Just... Go..."
+ 
+ "Leave me here."
+ 
+  "Close the door when you leave, and never look behind."
+ 
+
+ {speaker("narrator", "neutral")}
+ You step in.
+ 
+ {speaker("alex", "neutral")}
+ "Hey... I know you're in pain, and I know you made me with a specific goal in mind..."
+ 
+ "But... We are related. You're not alone in the world, even though your people are no longer here, I am, so..."
+ 
+ {speaker("villan", "neutral")}
+ "We are not related."
+ 
+ "You've fulfiled your mission, now you're as useless to me as you're free to do whatever you want."
+ 
+ "A trinket of the past won't hold the memory nor the honor of every single subject of mine..."
+ 
+ "I don't care about you, and pretending I do will do no one good."
+ 
+ "All there is left for me to do is wait here my immortal life, until they appear again."
+ 
+ "Until they come back, so I can achieve my goal."
+ 
+ "They may never come, but I have infinite time and no other task at hand."
+ 
+ "And be not mistaken: your flame may burn for ages, but it may also extinguish within a breath."
+ 
+ "You're not human, but you are not timeless."
+ 
+ "If you desire so much to live as a human, be aware of thine end, remember that you will dim and can be put out."
+ 
+ "... In that sense, you are now more human than me."
+ 
+{speaker("narrator", "neutral")}
+You get caught completely offguard by that.
+
+But before you can put any meaningful thought over it, the Ancient King doubles down his decision.
+
+ {speaker("villan", "neutral")}
+ "Go, now."
+ 
+  {speaker("mandacaru", "sad")}
+ "..."
+ "... Let's go, Alex, Galego."
+ 
+  {speaker("alex", "sad")}
+ "Okay..."
+ 
+  {speaker("galego", "sad")}
+  "..."
+  "Godspeed."
+ 
+ {speaker("narrator", "neutral")}
  And the adventure ends there.
  
  Days pass, and you are now living with Mandacaru for a while. She offered her house for you to stay a bit.
@@ -1735,6 +2055,18 @@ Galego steps in, with firm steps and a disappointed face.
  She has the technomages of the realm fixing you when needed.
  
  But soon, you're to part for another journey, to meet the world a bit more, just like you promissed your grandpa.
+ 
+ Maybe you will even meet Galego on the way.
+ 
+ Someone you never saw again after the events in Etrmnuk, when he became a wandering knight with no master, seeking for a reason to live.
+ 
+ Maybe one day, long, long after today, you will even revisit that tower, open the gate on the very top and see if the Ancient King had any luck in his mission, of at least if he is faring better.
+ 
+ After all, you are still a key to every part of it.
+ 
+ Until then... You learn, day by day, what is like to be a real human with meat of metal and heart of flame.
+ 
+ Until the former rusts to dust, and the latter extinguishs with one last breath.
  
  THE END.
 -> DONE
